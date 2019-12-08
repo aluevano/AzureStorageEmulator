@@ -1,0 +1,4 @@
+D:\Git\AzureStorageEmulator\Microsoft.Azure.DevelopmentStorage.Store\obj\Debug\Microsoft.Azure.DevelopmentStorage.Store.csprojAssemblyReference.cache
+D:\Git\AzureStorageEmulator\Microsoft.Azure.DevelopmentStorage.Store\obj\Debug\Microsoft.WindowsAzure.DevelopmentStorage.Store.Resources.resources
+D:\Git\AzureStorageEmulator\Microsoft.Azure.DevelopmentStorage.Store\obj\Debug\Microsoft.Azure.DevelopmentStorage.Store.csproj.GenerateResource.cache
+D:\Git\AzureStorageEmulator\Microsoft.Azure.DevelopmentStorage.Store\obj\Debug\Microsoft.Azure.DevelopmentStorage.Store.csproj.CoreCompileInputs.cache

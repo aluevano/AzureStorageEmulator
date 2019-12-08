@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StartUp" xml:space="preserve">
+    <value>Starting storage emulator services...</value>
+  </data>
+  <data name="EmulatorErrorMessageFailedToClearData" xml:space="preserve">
+    <value>The user data could not be cleared.</value>
+  </data>
+  <data name="EmulatorErrorMessageNoSqlInstanceFound" xml:space="preserve">
+    <value>No available SQL Instance was found.</value>
+  </data>
+  <data name="EmulatorErrorMessageStopRequired" xml:space="preserve">
+    <value>The storage emulator is currently running. Please stop the storage emulator before retrying this operation.</value>
+  </data>
+  <data name="MessageUnableToStartStorageEmulator" xml:space="preserve">
+    <value>Unable to start Storage Emulator.</value>
+  </data>
+  <data name="DSServiceUsage" xml:space="preserve">
+    <value>Usage: DSService [/nogui] [/database:&lt;database for table service&gt;][/shutdown]</value>
+  </data>
+  <data name="SqlInstanceError" xml:space="preserve">
+    <value>Cannot start storage emulator. The SQL Server instance '{0}' could not be found. Configure the SQL Server instance for the storage emulator using the 'AzureStorageEmulator init' command in the Microsoft Azure SDK.</value>
+  </data>
+  <data name="LocalDBInstallFound" xml:space="preserve">
+    <value>Found a LocalDB Installation.</value>
+  </data>
+  <data name="ActionsSucceeded" xml:space="preserve">
+    <value>Initialization successful. The storage emulator is now ready for use.</value>
+  </data>
+  <data name="FormatUnableToInitializeStorageEmulatorWithExitCode" xml:space="preserve">
+    <value>Unable to initialize Development Storage. Exit Code:</value>
+  </data>
+  <data name="CheckingDatabaseExists" xml:space="preserve">
+    <value>Checking if database '{0}' exists on SQL instance '{1}'.</value>
+  </data>
+  <data name="EmulatorErrorMessageAccountAlreadyExists" xml:space="preserve">
+    <value>An account with the same name already exists.</value>
+  </data>
+  <data name="AutoDetectRequested" xml:space="preserve">
+    <value>Autodetect requested. Autodetecting SQL Instance to use.</value>
+  </data>
+  <data name="InitializationPrompt" xml:space="preserve">
+    <value>The storage emulator needs to perform some initialization that needs administrator rights. Do you want to continue ?</value>
+  </data>
+  <data name="EmulatorErrorMessageAlreadyRunning" xml:space="preserve">
+    <value>The storage emulator is already running. Only one instance of the application can be run at the same time.</value>
+  </data>
+  <data name="CreatingDatabase" xml:space="preserve">
+    <value>Creating database {0} on SQL instance '{1}'.</value>
+  </data>
+  <data name="ResetWarning" xml:space="preserve">
+    <value>Reset will stop all the selected services and delete all the data stored by the services. Are you sure you want to reset?</value>
+  </data>
+  <data name="SuccessDeleteAccount" xml:space="preserve">
+    <value>Account {0} has been deleted.</value>
+  </data>
+  <data name="GrantedDatabaseAccess" xml:space="preserve">
+    <value>Database access for user {0} was granted.</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Cannot find the file '{0}' in the folder '{1}'.</value>
+  </data>
+  <data name="StorageEmulatorAlreadyRunning" xml:space="preserve">
+    <value>The storage emulator is already running. Only one instance of the application can be run at the same time.</value>
+  </data>
+  <data name="ShowUserInterfaceCaption" xml:space="preserve">
+    <value>Microsoft Azure Storage Emulator</value>
+  </data>
+  <data name="EmulatorErrorMessageReservationFailed" xml:space="preserve">
+    <value>Cannot reserve port.</value>
+  </data>
+  <data name="EmulatorErrorMessageConfigNotFound" xml:space="preserve">
+    <value>Storage emulator configuration file not found.</value>
+  </data>
+  <data name="MessageUnableToDetectSqlVersion" xml:space="preserve">
+    <value>Unable to detect SQL Version.</value>
+  </data>
+  <data name="SuccessCreateAccount" xml:space="preserve">
+    <value>Your account has been created.
+Account Name: {0}
+Primary Key: {1}
+Secondary Key: {2}
+Secondary Read Enabled: {3}</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>Azure SDK.</value>
+  </data>
+  <data name="ActionsFailed" xml:space="preserve">
+    <value>One or more initialization actions have failed. Resolve these errors before attempting to run the storage emulator again.</value>
+  </data>
+  <data name="SuccessRegenerateKey" xml:space="preserve">
+    <value>Account key for {0} has been regenerated.
+Primary Key: {1}
+Secondary Key: {2}</value>
+  </data>
+  <data name="ProbingSqlInstance" xml:space="preserve">
+    <value>Probing SQL Instance: '{0}'.</value>
+  </data>
+  <data name="GrantingDatabaseAccess" xml:space="preserve">
+    <value>Granting database access to user {0}.</value>
+  </data>
+  <data name="EmulatorErrorMessageCommandLineParsingFailed" xml:space="preserve">
+    <value>There was an error parsing the command line.</value>
+  </data>
+  <data name="DatabaseDoesNotExist" xml:space="preserve">
+    <value>Cannot find database '{0}'.</value>
+  </data>
+  <data name="RemovedReservation" xml:space="preserve">
+    <value>Removed reservation for {0} in user account {1}.</value>
+  </data>
+  <data name="EmulatorErrorMessageCorruptInstallation" xml:space="preserve">
+    <value>Unable to find emulator components. Please verify the installation and repair if needed.</value>
+  </data>
+  <data name="LocalDBInstallNotFound" xml:space="preserve">
+    <value>Could not find a LocalDB Installation.</value>
+  </data>
+  <data name="LocalDBCheckForInstall" xml:space="preserve">
+    <value>Looking for a LocalDB Installation.</value>
+  </data>
+  <data name="EmulatorErrorMessageStartFailed" xml:space="preserve">
+    <value>Unable to start the storage emulator.</value>
+  </data>
+  <data name="DatabaseCreationFailed" xml:space="preserve">
+    <value>Cannot create database '{0}' : {1}.</value>
+  </data>
+  <data name="UnableToResetAzureDrive" xml:space="preserve">
+    <value>Cannot reset the local Microsoft Azure drive store. One or more of the files may be in use.</value>
+  </data>
+  <data name="InvalidUri1" xml:space="preserve">
+    <value>The URI '{0}' is not valid. The URI should be in the form 'http://127.0.0.1:&lt;port-number&gt;/'.</value>
+  </data>
+  <data name="FormatUnableToFindFilePleaseVerifyInstall" xml:space="preserve">
+    <value>Unable to find file '{0}'. Please verify the installation and repair if needed.</value>
+  </data>
+  <data name="UserSpecifiedInstance" xml:space="preserve">
+    <value>User specified an instance through /server or /sqlInstance options.</value>
+  </data>
+  <data name="SuccessClearFormat" xml:space="preserve">
+    <value>The following services have been succesfully cleared of user data: {0}</value>
+  </data>
+  <data name="ReservationFailed" xml:space="preserve">
+    <value>Cannot reserve port: {0}.</value>
+  </data>
+  <data name="EmptyInstanceAutoDetecting" xml:space="preserve">
+    <value>Empty SQL Instance. Autodetecting SQL Instance to use.</value>
+  </data>
+  <data name="EmulatorErrorMessageAccountNotFound" xml:space="preserve">
+    <value>The specified account does not exist.</value>
+  </data>
+  <data name="EmulatorErrorMessageAlreadyStopped" xml:space="preserve">
+    <value>The storage emulator is already stopped.</value>
+  </data>
+  <data name="SuccessInit" xml:space="preserve">
+    <value>The storage emulator was successfully initialized and is ready to use.</value>
+  </data>
+  <data name="SuccessStop" xml:space="preserve">
+    <value>The storage emulator was successfully stopped.</value>
+  </data>
+  <data name="ReservationFailedIncorrectUser" xml:space="preserve">
+    <value>Cannot reserve port because {0} is not a valid user: {1}.</value>
+  </data>
+  <data name="MessageUnableToOpenWaitHandle" xml:space="preserve">
+    <value>Unable to open wait handle.</value>
+  </data>
+  <data name="EmulatorErrorMessageNeedToWaitForAccountDeletion" xml:space="preserve">
+    <value>Cannot create an account with the same name right after it was deleted.</value>
+  </data>
+  <data name="UserSpecifiedRetryProbe" xml:space="preserve">
+    <value>Probing failed. Retrying probe for user-specified instance.</value>
+  </data>
+  <data name="StorageEmulatorStillRunning" xml:space="preserve">
+    <value>The storage emulator is running.</value>
+  </data>
+  <data name="ShowUserInterfaceMessage" xml:space="preserve">
+    <value>The graphical user interface for the Microsoft Azure Storage Emulator has been deprecated. The functionality is now provided by a new scriptable command line interface.
+
+Would you like to use the new command line interface or the old deprecated interface? Choose "Help" for more information.</value>
+  </data>
+  <data name="Dummy" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="UnknownOption" xml:space="preserve">
+    <value>The option is not valid: {0}</value>
+  </data>
+  <data name="InvalidDatabaseName" xml:space="preserve">
+    <value>'{0}' is not a valid database name.</value>
+  </data>
+  <data name="UICaption" xml:space="preserve">
+    <value>Storage Emulator</value>
+  </data>
+  <data name="EmulatorErrorMessageUnknownError" xml:space="preserve">
+    <value>An unknown error has occurred.</value>
+  </data>
+  <data name="AddedReservation" xml:space="preserve">
+    <value>Added reservation for {0} in user account {1}.</value>
+  </data>
+  <data name="EmulatorErrorMessageReservationFailedIncorrectUser" xml:space="preserve">
+    <value>Port reservation failed because of invalid user.</value>
+  </data>
+  <data name="DSInitCaption" xml:space="preserve">
+    <value>Microsoft Azure storage emulator initialization.</value>
+  </data>
+  <data name="ResetAzureDrive" xml:space="preserve">
+    <value>Reset will delete all of the data stored in the local Microsoft Azure drive store. Are you sure you want to reset?</value>
+  </data>
+  <data name="MessageStartOfStorageEmulatorFailed" xml:space="preserve">
+    <value>Start of Storage Emulator Failed.</value>
+  </data>
+  <data name="EmulatorErrorMessageCannotDeleteDefaultAccount" xml:space="preserve">
+    <value>A default account cannot be deleted.</value>
+  </data>
+  <data name="ShowUserInterfaceOldButtonText" xml:space="preserve">
+    <value>Old Interface</value>
+  </data>
+  <data name="ServerSpecified" xml:space="preserve">
+    <value>Attempting to use server specified.</value>
+  </data>
+  <data name="NoConfigurationAutoDetecting" xml:space="preserve">
+    <value>No user configuration file. Autodetecting SQL Instance to use.</value>
+  </data>
+  <data name="InvalidUri" xml:space="preserve">
+    <value>The URI '{0}' contained in the configuration is not valid.</value>
+  </data>
+  <data name="MessageboxTitle" xml:space="preserve">
+    <value>Microsoft Azure Storage Emulator</value>
+  </data>
+  <data name="CannotCreateFolder" xml:space="preserve">
+    <value>Cannot create folder '{0}' :'{1}'.</value>
+  </data>
+  <data name="MessageUnableToInitializeStorageEmulatorTimedOut" xml:space="preserve">
+    <value>Unable to initialize Storage Emulator. Timed out.</value>
+  </data>
+  <data name="FormatRetryProbe" xml:space="preserve">
+    <value>Probing Failed. Retrying attempt {0} out of {1}.</value>
+  </data>
+  <data name="MessageDidNotReceiveReadySignalFromStorageEmulator" xml:space="preserve">
+    <value>Did not receive ready signal from Storage Emulator.</value>
+  </data>
+  <data name="SuccessStart" xml:space="preserve">
+    <value>The storage emulator was successfully started.</value>
+  </data>
+  <data name="EmulatorErrorMessageDatabaseCreationFailed" xml:space="preserve">
+    <value>Cannot create database.</value>
+  </data>
+  <data name="EmulatorErrorMessageUserSpecifiedSqlInstanceNotFound" xml:space="preserve">
+    <value>User-specified instance not found. Please correct this and re-run initialization.</value>
+  </data>
+  <data name="AddedDatabaseRole" xml:space="preserve">
+    <value>Added database role for user {0}.</value>
+  </data>
+  <data name="EmulatorErrorMessageInitializationRequired" xml:space="preserve">
+    <value>The storage emulator needs to be initialized. Please run the 'init' command.</value>
+  </data>
+  <data name="SuccessUpdateAccount" xml:space="preserve">
+    <value>Your account has been updated.
+Account Name: {0}
+Primary Key: {1}
+Secondary Key: {2}
+Secondary Read Enabled: {3}</value>
+  </data>
+  <data name="AddingDatabaseRole" xml:space="preserve">
+    <value>Adding database role for user {0}.</value>
+  </data>
+  <data name="LocalDBInstalledButNotRunning" xml:space="preserve">
+    <value>LocalDB is installed but is not functioning properly. You may be missing prerequisites. Make sure you have .NET 4.0.2 or higher installed.</value>
+  </data>
+  <data name="CouldNotDetectIfLocalDBIsInstalled" xml:space="preserve">
+    <value>Could not detect if LocalDB is installed. To use LocalDB make sure LocalDB is installed and you have .NET 4.0.2 or higher installed.</value>
+  </data>
+  <data name="ErrorCleaningDB" xml:space="preserve">
+    <value>Cannot clean the database: {0}.</value>
+  </data>
+  <data name="RecreatingDatabase" xml:space="preserve">
+    <value>Recreating database: '{0}'.</value>
+  </data>
+  <data name="ShowUserInterfaceNewButtonText" xml:space="preserve">
+    <value>New Command Line</value>
+  </data>
+  <data name="FoundSqlInstance" xml:space="preserve">
+    <value>Found SQL Instance {0}.</value>
+  </data>
+</root>

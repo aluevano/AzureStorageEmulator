@@ -1,0 +1,1762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompilationErrors" xml:space="preserve">
+    <value>Unexpected errors occured during the compilation of the generated code: {0}</value>
+  </data>
+  <data name="CommitBlockList" xml:space="preserve">
+    <value>IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'ReplaceStringOnlyIfNotNullOrEmpty'
+)
+BEGIN
+    DROP FUNCTION ReplaceStringOnlyIfNotNullOrEmpty
+END
+go
+
+CREATE function ReplaceStringOnlyIfNotNullOrEmpty(
+    @baseString nvarchar(260),
+    @pattern nvarchar(260),
+    @replaceString nvarchar(260)
+)
+    returns nvarchar(260)
+AS
+BEGIN
+
+DECLARE @retStr as nvarchar(260)
+SET @retStr = @baseString
+
+IF (@pattern IS NOT NULL
+    AND @pattern != ''
+    AND @replaceString IS NOT NULL
+    AND @replaceString != ''
+    )
+BEGIN
+    SET @retStr = REPLACE( @baseString, @pattern,  @replaceString)
+END
+
+return @retStr
+
+END
+GO
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'CommitBlockList'
+)
+BEGIN
+    DROP PROCEDURE CommitBlockList
+END
+go
+
+create procedure CommitBlockList
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @blocks varchar(max),
+    @lastModificationTime DATETIME OUTPUT
+as
+begin
+    BEGIN TRANSACTION
+
+    DECLARE @versionTimestamp DATETIME
+    SET @versionTimestamp = '9999-12-31T23:59:59.997'
+
+    -- The ordered list of committed blocks, put in a table for joining later.
+    declare @newBlocks TABLE (
+        SequenceNumber INT IDENTITY,
+        BlockId VARCHAR(128),
+        BlockSource INT
+        )
+
+    -- Deserialize the blocks argument to get a list of blocks to commit.
+    DECLARE @blockOffset INT
+    SET @blockOffset = 1
+    DECLARE @blockIdSize INT
+    DECLARE @blockId VARCHAR(128)
+    DECLARE @blockSource INT
+
+    DECLARE @blocksLength INT
+    SET @blocksLength = DATALENGTH(@blocks)
+    WHILE (@blockOffset &lt;= @blocksLength)
+    BEGIN
+        SET @blockIdSize = ASCII(SUBSTRING(@blocks, @blockOffset, 1)) - 32
+        SET @blockOffset = @blockOffset + 1
+
+        SET @blockId = SUBSTRING(@blocks, @blockOffset, @blockIdSize * 2)
+        SET @blockOffset = @blockOffset + @blockIdSize * 2
+
+        SET @blockSource = ASCII(SUBSTRING(@blocks, @blockOffset, 1)) - 48
+        SET @blockOffset = @blockOffset + 1
+
+        INSERT INTO @newBlocks(BlockId, BlockSource) VALUES (@blockId, @blockSource)
+    END
+
+    -- Change all blocks with a source of latest to uncommitted first
+    -- and convert the remaining to committed
+    UPDATE @newBlocks
+    SET BlockSource = 1 -- Uncommitted
+    WHERE BlockSource = 3 -- Latest
+      AND BlockId in (
+            SELECT old.BlockId
+            FROM BlockData AS old
+            WHERE old.AccountName = @accountName
+                AND old.ContainerName = @containerName
+                AND old.BlobName = @blobName
+                AND old.VersionTimestamp = @versionTimestamp
+                AND old.IsCommitted = 0)
+
+    UPDATE @newBlocks
+    SET BlockSource = 2 -- Committed
+    WHERE BlockSource = 3
+
+    -- Delete all blocks not in the new block list.
+    DELETE FROM BlockData
+    WHERE BlockData.AccountName = @accountName
+        AND BlockData.ContainerName = @containerName
+        AND BlockData.BlobName = @blobName
+        AND BlockData.VersionTimestamp = @versionTimestamp
+        AND NOT EXISTS (
+            SELECT 1
+            FROM @newBlocks AS new
+            WHERE BlockData.BlockId = new.BlockId
+                AND BlockData.IsCommitted = (CASE new.BlockSource WHEN 1 THEN 0 ELSE 1 END) )
+
+    -- All the new blocks are going to be committed, so set the IsCommitted flag.
+    UPDATE BlockData
+    SET IsCommitted = 1
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+        AND IsCommitted = 0
+        AND BlockId IN (SELECT BlockId FROM @newBlocks)
+
+
+    -- Now, go over each of the blocks to be committed to get the starting offset of the block.
+    DECLARE newBlockCursor CURSOR FOR
+        SELECT new.BlockId, old.Length
+        FROM @newBlocks AS new
+        LEFT OUTER JOIN (
+            SELECT * FROM BlockData AS old
+            WHERE old.AccountName = @accountName
+                AND old.ContainerName = @containerName
+                AND old.BlobName = @blobName
+                AND old.VersionTimestamp = @versionTimestamp) AS old
+        ON new.BlockId = old.BlockId
+        ORDER BY SequenceNumber
+
+    DECLARE @length BIGINT
+    DECLARE @offset BIGINT
+    SET @offset = 0
+
+    OPEN newBlockCursor
+
+    DELETE FROM CommittedBlock
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+
+    FETCH NEXT FROM newBlockCursor INTO @blockId, @length
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+        IF @length IS NULL
+        BEGIN
+            RAISERROR('InvalidBlockList', 16, 1)
+            ROLLBACK TRANSACTION
+
+            RETURN
+        END
+
+        INSERT INTO CommittedBlock (AccountName, ContainerName, BlobName, VersionTimestamp, Offset, BlockId, Length, BlockVersion)
+        VALUES (@accountName, @containerName, @blobName, @versionTimestamp, @offset, @blockId, @length, @versionTimestamp)
+
+        set @offset = @offset + @length
+        FETCH NEXT FROM newBlockCursor INTO @blockId, @length
+    END
+
+    CLOSE newBlockCursor
+
+    -- Set this separately, since it does not update the LastModificationTime
+    UPDATE Blob
+    SET UncommittedBlockIdLength = NULL
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+
+    UPDATE Blob
+    SET IsCommitted = 1, ContentLength = @offset
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+
+    SELECT @lastModificationTime = LastModificationTime
+    FROM Blob
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+
+    COMMIT TRANSACTION
+end
+
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'ClearUncommittedBlocks'
+)
+BEGIN
+    DROP PROCEDURE ClearUncommittedBlocks
+END
+go
+
+CREATE PROCEDURE ClearUncommittedBlocks
+    @accountName VARCHAR(24),
+    @containerName VARCHAR(63),
+    @blobName NVARCHAR(256)
+AS
+BEGIN
+    DECLARE @versionTimestamp DATETIME
+    SET @versionTimestamp = '9999-12-31T23:59:59.997'
+
+    DELETE FROM BlockData
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND IsCommitted = 0
+
+    UPDATE Blob
+    SET UncommittedBlockIdLength = NULL
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @versionTimestamp
+END
+
+GO
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'CopyBlockBlob'
+)
+BEGIN
+    DROP PROCEDURE CopyBlockBlob
+END
+go
+
+create procedure CopyBlockBlob
+    @sourceAccountName varchar(24),
+    @accountName varchar(24),
+    @sourceContainerName varchar(63),
+    @sourceBlobName nvarchar(256),
+    @sourceVersionTimestamp DATETIME,
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @oldDataDirectory nvarchar(260),
+    @newDataDirectory nvarchar(260)
+as
+begin
+    DECLARE @maxDateTime DATETIME
+    SET @maxDateTime = '9999-12-31T23:59:59.997'
+
+    IF (@sourceAccountName = @accountName and @sourceContainerName = @containerName and @sourceBlobName = @blobName and @sourceVersionTimestamp = @maxDateTime)
+    BEGIN
+
+        -- Delete all the uncommitted blocks for the blob
+        DELETE FROM BlockData
+        WHERE AccountName = @accountName
+            AND ContainerName = @containerName
+            AND BlobName = @blobName
+            AND VersionTimestamp = @maxDateTime
+            AND IsCommitted = 0
+
+        UPDATE Blob
+        SET LastModificationTime = GETUTCDATE()
+        WHERE AccountName = @accountName
+          AND ContainerName = @containerName
+          AND BlobName = @blobName
+          AND VersionTimestamp = @maxDateTime
+
+        RETURN
+    END
+
+
+    -- Delete all the old blocks for the blob
+    DELETE FROM BlockData
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+    -- Delete the committed blocks for the target
+    DELETE FROM CommittedBlock
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+    -- Update the directory of the blob, if a new directory holds the data
+    IF( @newDataDirectory IS NOT NULL
+        AND @newDataDirectory != '' )
+    BEGIN
+        UPDATE Blob
+        SET DirectoryPath = @newDataDirectory
+        WHERE AccountName = @accountName
+            AND ContainerName = @containerName
+            AND BlobName = @blobName
+            AND VersionTimestamp = @maxDateTime
+    END
+
+    -- Copy the blocks from the old snapshot to the new root.
+    -- TODO: There is no sharing of blocks.
+    -- Change the directory to new directory only if non null and non empty directory is given as input
+    INSERT INTO BlockData
+    SELECT @accountName, @containerName, @blobName, @maxDateTime, b.IsCommitted, b.BlockId, b.Length,b.StartOffset, dbo.ReplaceStringOnlyIfNotNullOrEmpty(b.FilePath,@oldDataDirectory,@newDataDirectory)
+    FROM BlockData AS b
+    WHERE b.AccountName = @sourceAccountName
+      AND b.ContainerName = @sourceContainerName
+      AND b.BlobName = @sourceBlobName
+      AND b.IsCommitted = 1
+      AND EXISTS (
+            SELECT 1
+            FROM CommittedBlock AS c
+            WHERE c.AccountName = @sourceAccountName
+              AND c.ContainerName = @sourceContainerName
+              AND c.BlobName = @sourceBlobName
+              AND c.VersionTimestamp = @sourceVersionTimestamp
+              AND c.BlockId = b.BlockId
+              AND c.BlockVersion = b.VersionTimestamp)
+
+
+    -- Copy/create the committed block rows.
+    INSERT INTO CommittedBlock
+    SELECT @accountName, @containerName, @blobName, @maxDateTime, Offset, BlockId, Length, @maxDateTime
+    FROM CommittedBlock
+    WHERE AccountName = @sourceAccountName
+      AND ContainerName = @sourceContainerName
+      AND BlobName = @sourceBlobName
+      AND VersionTimestamp = @sourceVersionTimestamp
+end
+
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'SnapshotBlockBlob'
+)
+BEGIN
+    DROP PROCEDURE SnapshotBlockBlob
+END
+go
+
+create procedure SnapshotBlockBlob
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @metadata VARBINARY(MAX),
+    @snapshotTimestamp DATETIME OUTPUT,
+    @snapshotLastModificationTime DATETIME OUTPUT
+as
+begin
+
+    DECLARE @maxDateTime DATETIME
+    SET @maxDateTime = '9999-12-31T23:59:59.997'
+
+    SET @snapshotTimestamp = GETUTCDATE()
+
+    INSERT INTO Blob (
+           [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,[VersionTimestamp]
+          ,[BlobType]
+          ,[CreationTime]
+          ,[LastModificationTime]
+          ,[ContentLength]
+          ,[ContentType]
+          ,[ContentMD5]
+          ,[ServiceMetadata]
+          ,[Metadata]
+          ,[LeaseId]
+          ,[LeaseState]
+          ,[LeaseDuration]
+          ,[LeaseEndTime]
+          ,[SequenceNumber]
+          ,[IsCommitted]
+          ,[HasBlock]
+          ,[UncommittedBlockIdLength]
+          ,[DirectoryPath]
+          ,[SnapshotCount]
+          ,[GenerationId])
+    SELECT [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,@snapshotTimestamp
+          ,[BlobType]
+          ,[CreationTime]
+          ,[LastModificationTime]
+          ,[ContentLength]
+          ,[ContentType]
+          ,[ContentMD5]
+          ,[ServiceMetadata]
+          ,[Metadata]
+          ,[LeaseId]
+          ,[LeaseState]
+          ,[LeaseDuration]
+          ,[LeaseEndTime]
+          ,[SequenceNumber]
+          ,[IsCommitted]
+          ,[HasBlock]
+          ,[UncommittedBlockIdLength]
+          ,[DirectoryPath]
+          ,[SnapshotCount]
+          ,[GenerationId]
+    FROM Blob
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+    UPDATE BlockData
+    SET VersionTimestamp = @snapshotTimestamp
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+      AND IsCommitted = 1
+
+    UPDATE CommittedBlock
+    SET BlockVersion = @snapshotTimestamp
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+      AND BlockVersion = @maxDateTime
+
+    INSERT INTO CommittedBlock
+    SELECT [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,@snapshotTimestamp
+          ,[Offset]
+          ,[BlockId]
+          ,[Length]
+          ,[BlockVersion]
+    FROM CommittedBlock
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+    IF (@metadata IS NOT NULL)
+    BEGIN
+        UPDATE Blob
+        SET Metadata = @metadata
+        WHERE AccountName = @accountName
+          AND ContainerName = @containerName
+          AND BlobName = @blobName
+          AND VersionTimestamp = @snapshotTimestamp
+
+        SELECT @snapshotLastModificationTime = LastModificationTime
+        FROM Blob
+        WHERE AccountName = @accountName
+          AND ContainerName = @containerName
+          AND BlobName = @blobName
+          AND VersionTimestamp = @snapshotTimestamp
+    END
+end
+GO
+
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'DeleteSnapshots'
+)
+BEGIN
+    DROP PROCEDURE DeleteSnapshots
+END
+go
+
+create procedure DeleteSnapshots
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @isDeletingOnlySnapshots BIT,
+    @requiresNoSnapshots BIT
+as
+begin
+    DECLARE @versionTimestamp DATETIME
+    SET @versionTimestamp = '9999-12-31T23:59:59.997'
+
+    IF ( (@requiresNoSnapshots = 1)
+        AND EXISTS (
+            SELECT 1 FROM dbo.Blob
+            WHERE AccountName = @accountName
+              AND ContainerName = @containerName
+              AND BlobName = @blobName
+              AND VersionTimestamp &lt; @versionTimestamp) )
+    BEGIN
+        RAISERROR('BlobHasSnapshots', 16, 1)
+        RETURN
+    END
+
+    IF (@isDeletingOnlySnapshots = 1)
+    BEGIN
+        DELETE FROM dbo.Blob
+            WHERE AccountName = @accountName
+              AND ContainerName = @containerName
+              AND BlobName = @blobName
+              AND VersionTimestamp &lt; @versionTimestamp
+
+        IF (@@ROWCOUNT = 0)
+        BEGIN
+            RAISERROR('BlobHasNoSnapshots', 16, 1)
+        END
+    END
+    ELSE
+    BEGIN
+        DELETE FROM dbo.Blob
+            WHERE AccountName = @accountName
+              AND ContainerName = @containerName
+              AND BlobName = @blobName
+    END
+end
+GO
+
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'CopyPageBlob'
+)
+BEGIN
+    DROP PROCEDURE CopyPageBlob
+END
+go
+
+create procedure CopyPageBlob
+    @sourceAccountName varchar(24),
+    @accountName varchar(24),
+    @sourceContainerName varchar(63),
+    @sourceBlobName nvarchar(256),
+    @sourceVersionTimestamp DATETIME,
+    @containerName varchar(63),
+    @blobName nvarchar(256)
+as
+begin
+    DECLARE @maxDateTime DATETIME
+    SET @maxDateTime = '9999-12-31T23:59:59.997'
+
+    IF (@sourceAccountName = @accountName and @sourceContainerName = @containerName and @sourceBlobName = @blobName and @sourceVersionTimestamp = @maxDateTime)
+    BEGIN
+        UPDATE Blob
+        SET LastModificationTime = GETUTCDATE()
+        WHERE AccountName = @accountName
+          AND ContainerName = @containerName
+          AND BlobName = @blobName
+          AND VersionTimestamp = @maxDateTime
+
+        RETURN
+    END
+
+    DELETE FROM CurrentPage
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+    INSERT INTO CurrentPage
+    SELECT @accountName, @containerName, @blobName, @maxDateTime, StartOffset, EndOffset, 0
+    FROM CurrentPage
+    WHERE AccountName = @sourceAccountName
+      AND ContainerName = @sourceContainerName
+      AND BlobName = @sourceBlobName
+      AND VersionTimestamp = @sourceVersionTimestamp
+end
+
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'SnapshotPageBlob'
+)
+BEGIN
+    DROP PROCEDURE SnapshotPageBlob
+END
+go
+
+create procedure SnapshotPageBlob
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @metadata VARBINARY(MAX),
+    @pageFileName nvarchar(260),
+    @snapshotCount INT,
+    @snapshotTimestamp DATETIME OUTPUT,
+    @snapshotLastModificationTime DATETIME OUTPUT
+as
+begin
+
+    DECLARE @maxDateTime DATETIME
+    SET @maxDateTime = '9999-12-31T23:59:59.997'
+    DECLARE @newSnapshotCount INT
+    SET @newSnapshotCount = @snapshotCount + 1
+
+    SET @snapshotTimestamp = GETUTCDATE()
+    -- Start by making the new entry for the snapshot blob in the Blob table.
+    INSERT INTO Blob (
+           [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,[VersionTimestamp]
+          ,[BlobType]
+          ,[CreationTime]
+          ,[LastModificationTime]
+          ,[ContentLength]
+          ,[ContentType]
+          ,[ContentMD5]
+          ,[ServiceMetadata]
+          ,[Metadata]
+          ,[LeaseId]
+          ,[LeaseState]
+          ,[LeaseDuration]
+          ,[LeaseEndTime]
+          ,[SequenceNumber]
+          ,[MaxSize]
+          ,[FileName]
+          ,[SnapshotCount]
+          ,[GenerationId]
+          ,[IsIncrementalCopy]
+          )
+    SELECT [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,@snapshotTimestamp
+          ,[BlobType]
+          ,[CreationTime]
+          ,[LastModificationTime]
+          ,[ContentLength]
+          ,[ContentType]
+          ,[ContentMD5]
+          ,[ServiceMetadata]
+          ,[Metadata]
+          ,[LeaseId]
+          ,[LeaseState]
+          ,[LeaseDuration]
+          ,[LeaseEndTime]
+          ,[SequenceNumber]
+          ,[MaxSize]
+          ,@pageFileName
+          ,[SnapshotCount]
+          ,[GenerationId]
+          ,[IsIncrementalCopy]
+    FROM Blob
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+      -- Copy pages from root blob pages table to snapshot blob pages table.
+    INSERT INTO Page
+    SELECT [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,@snapshotTimestamp
+          ,[StartOffset]
+          ,[EndOffset]
+          ,[StartOffset] -- FileOffset is the same as StartOffset, since we copy the entire file.
+          ,[SnapshotCount]
+    FROM CurrentPage
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+    IF (@metadata IS NOT NULL)
+    BEGIN
+        UPDATE Blob
+        SET Metadata = @metadata
+        WHERE AccountName = @accountName
+          AND ContainerName = @containerName
+          AND BlobName = @blobName
+          AND VersionTimestamp = @snapshotTimestamp
+
+        SELECT @snapshotLastModificationTime = LastModificationTime
+        FROM Blob
+        WHERE AccountName = @accountName
+          AND ContainerName = @containerName
+          AND BlobName = @blobName
+          AND VersionTimestamp = @snapshotTimestamp
+    END
+
+    --Update snapshot count on root blob.
+    UPDATE Blob
+    SET SnapshotCount = @newSnapshotCount, IsLeaseOp = 1 -- Reuse IsLeaseOp to keep LMT from changing.
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @maxDateTime
+
+    -- This should be dead code.
+    -- Copy the pages
+    INSERT INTO Page
+    SELECT [AccountName]
+          ,[ContainerName]
+          ,[BlobName]
+          ,@snapshotTimestamp
+          ,[StartOffset]
+          ,[EndOffset]
+          ,[StartOffset] -- FileOffset is the same as StartOffset, since we copy the entire file.
+          ,[SnapshotCount]
+    FROM Page
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+      AND BlobName = @blobName
+      AND VersionTimestamp = @maxDateTime
+
+end
+GO
+
+</value>
+  </data>
+  <data name="QueueFunctions" xml:space="preserve">
+    <value>IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'DequeueMessages'
+)
+BEGIN
+    DROP PROCEDURE DequeueMessages
+END
+go
+
+CREATE PROCEDURE DequeueMessages (
+    @accountName VARCHAR(24),
+    @queueName VARCHAR(63),
+    @visibilityTimeout INT,
+    @dequeueCount INT)
+AS
+BEGIN
+    SET NOCOUNT ON
+
+    DECLARE @currentTime DATETIME
+    SET @currentTime = GETUTCDATE()
+
+    DECLARE @newVisibilityTime DATETIME
+    SET @newVisibilityTime = DATEADD(SS, @visibilityTimeout, GETUTCDATE())
+
+    UPDATE TOP(@dequeueCount) QueueMessage
+    SET VisibilityStartTime = @newVisibilityTime,
+        DequeueCount = DequeueCount + 1
+    OUTPUT inserted.*
+    WHERE AccountName = @accountName
+      AND QueueName = @queueName
+      AND VisibilityStartTime &lt;= @currentTime
+      AND ExpiryTime &gt;= @currentTime
+END
+
+go
+
+CREATE PROCEDURE ClearQueue (
+    @accountName VARCHAR(24),
+    @queueName VARCHAR(63))
+AS
+BEGIN
+    SET NOCOUNT ON
+
+    DELETE FROM QueueMessage
+    WHERE AccountName = @accountName
+      AND QueueName = @queueName
+END
+
+</value>
+  </data>
+  <data name="BlobSummary" xml:space="preserve">
+    <value>IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'EscapedLikeString'
+)
+BEGIN
+    DROP FUNCTION EscapedLikeString
+END
+go
+
+CREATE function EscapedLikeString(
+    @prefix nvarchar(256)
+    )
+    returns nvarchar(256)
+as
+begin
+    IF (@prefix IS NULL)
+    BEGIN
+        RETURN @prefix
+    END
+
+    DECLARE @prefixLength INT
+    DECLARE @escapedLikeString NVARCHAR(256)
+    SET @escapedLikeString = N''
+
+    SET @prefixLength = LEN(@prefix)
+    DECLARE @i INT;
+    SET @i = 0
+
+    DECLARE @c NVARCHAR
+
+    WHILE (@i &lt; @prefixLength)
+    begin
+        SET @c = SUBSTRING(@prefix, @i + 1, 1)
+
+        IF (@c = '%' or @c = '_' or @c = '[')
+        BEGIN
+            SET @escapedLikeString = @escapedLikeString +'[' + @c + ']'
+        END
+        ELSE
+        BEGIN
+            SET @escapedLikeString = @escapedLikeString + @c
+        END
+
+        SET @i = @i + 1
+    end
+
+    return @escapedLikeString
+end
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'MatchingDelimiter'
+)
+BEGIN
+    DROP FUNCTION MatchingDelimiter
+END
+go
+
+CREATE function MatchingDelimiter(
+    @value nvarchar(256),
+    @prefix nvarchar(256),
+    @delimiter nvarchar(256)
+    )
+    returns nvarchar(256)
+as
+begin
+    DECLARE @prefixLength INT
+    SET @prefixLength = 0
+    IF (@prefix IS NOT NULL)
+    BEGIN
+        SET @prefixLength = len(@prefix)
+    END
+
+    if ((@prefix IS NULL) OR (left(@value, @prefixLength) = @prefix))
+    begin
+        declare @index int
+        set @index = charindex(@delimiter, @value, @prefixLength + 1)
+        if (@index &gt; 0)
+        begin
+            return left(@value, @index + len(@delimiter) - 1)
+        end
+    end
+    return @value
+end
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'GetSummaryBlobs'
+)
+BEGIN
+    DROP FUNCTION GetSummaryBlobs
+END
+go
+
+CREATE FUNCTION GetSummaryBlobs(
+    @accountName nvarchar(24),
+    @containerName nvarchar(63),
+    @prefix nvarchar(256),
+    @delimiter nvarchar(256)
+    ) RETURNS TABLE
+AS
+RETURN (
+    SELECT Blob.*
+    FROM (
+        select distinct SummaryBlobName, MIN(BlobName) AS BlobName
+        from (
+            select dbo.MatchingDelimiter(BlobName, @prefix, @delimiter) as SummaryBlobName, BlobName
+            from Blob
+            WHERE AccountName = @accountName
+              AND ContainerName = @containerName
+              AND BlobName LIKE dbo.EscapedLikeString(ISNULL(@prefix, '')) + '%'
+            ) as Summary
+        group by SummaryBlobName) AS Summary
+    JOIN Blob
+    on Summary.BlobName = Blob.BlobName
+    WHERE AccountName = @accountName
+      AND ContainerName = @containerName
+)
+
+GO
+
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'GetSummaryBlobContainers'
+)
+BEGIN
+    DROP FUNCTION GetSummaryBlobContainers
+END
+go
+
+CREATE FUNCTION GetSummaryBlobContainers(
+    @accountName nvarchar(24),
+    @prefix nvarchar(256),
+    @delimiter nvarchar(256)
+    ) RETURNS TABLE
+AS
+RETURN (
+    SELECT BlobContainer.*
+    FROM (
+        select distinct SummaryContainerName, MIN(ContainerName) AS ContainerName
+        from (
+            select dbo.MatchingDelimiter(ContainerName, @prefix, @delimiter) as SummaryContainerName, ContainerName
+            from BlobContainer
+            WHERE AccountName = @accountName
+              AND ContainerName LIKE ISNULL(@prefix, '') + '%'
+            ) as Summary
+        group by SummaryContainerName) AS Summary
+    JOIN BlobContainer
+    on Summary.ContainerName = BlobContainer.ContainerName
+    WHERE AccountName = @accountName
+)
+
+GO
+
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'GetSummaryQueueContainers'
+)
+BEGIN
+    DROP FUNCTION GetSummaryQueueContainers
+END
+go
+
+CREATE FUNCTION GetSummaryQueueContainers(
+    @accountName nvarchar(24),
+    @prefix nvarchar(256),
+    @delimiter nvarchar(256)
+    ) RETURNS TABLE
+AS
+RETURN (
+    SELECT QueueContainer.*
+    FROM (
+        select distinct SummaryQueueName, MIN(QueueName) AS QueueName
+        from (
+            select dbo.MatchingDelimiter(QueueName, @prefix, @delimiter) as SummaryQueueName, QueueName
+            from QueueContainer
+            WHERE AccountName = @accountName
+              AND QueueName LIKE ISNULL(@prefix, '') + '%'
+            ) as Summary
+        group by SummaryQueueName) AS Summary
+    JOIN QueueContainer
+    on Summary.QueueName = QueueContainer.QueueName
+    WHERE AccountName = @accountName
+)
+
+GO
+
+</value>
+  </data>
+  <data name="PageBlob" xml:space="preserve">
+    <value>IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'InsertPageHelper'
+)
+BEGIN
+    DROP PROCEDURE InsertPageHelper
+END
+go
+
+create procedure InsertPageHelper
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @versionTimestamp DATETIME,
+    @startOffset BIGINT,
+    @endOffset BIGINT,
+    @fileOffset BIGINT,
+    @snapshotCount INT,
+    @deletePage BIT
+as
+begin
+    INSERT INTO Page
+    SELECT @accountName, @containerName, @blobName, @versionTimestamp, @endOffset, EndOffset, FileOffset + (@endOffset - StartOffset), @snapshotCount
+    FROM Page
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+        AND StartOffset BETWEEN @startOffset AND @endOffset
+        AND EndOffset &gt; @endOffset
+
+    UPDATE Page
+    SET EndOffset = @startOffset
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+        AND StartOffset &lt; @startOffset
+        AND EndOffset BETWEEN @startOffset AND @endOffset
+
+    DELETE FROM Page
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+        AND ((StartOffset &gt;= @startOffset AND StartOffset &lt; @endOffset)
+            OR (EndOffset &gt; @startOffset AND EndOffset &lt;= @endOffset))
+
+    IF (@deletePage &lt;&gt; 1)
+    BEGIN
+        INSERT INTO PAGE
+        VALUES (@accountName, @containerName, @blobName, @versionTimestamp, @startOffset, @endOffset, @fileOffset, @snapshotCount)
+    END
+end
+
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'InsertPage'
+)
+BEGIN
+    DROP PROCEDURE InsertPage
+END
+go
+
+create procedure InsertPage
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @versionTimestamp DATETIME,
+    @startOffset BIGINT,
+    @endOffset BIGINT,
+    @fileOffset BIGINT,
+    @snapshotCount INT
+as
+begin
+    EXEC InsertPageHelper @accountName, @containerName, @blobName, @versionTimestamp, @startOffset, @endOffset, @fileOffset, @snapshotCount, 0
+end
+
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'DeletePage'
+)
+BEGIN
+    DROP PROCEDURE DeletePage
+END
+go
+
+create procedure DeletePage
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @versionTimestamp DATETIME,
+    @startOffset BIGINT,
+    @endOffset BIGINT,
+    @fileOffset BIGINT,
+    @snapshotCount INT
+as
+begin
+    EXEC InsertPageHelper @accountName, @containerName, @blobName, @versionTimestamp, @startOffset, @endOffset, @fileOffset, @snapshotCount, 1
+end
+
+go
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'InsertCurrentPage'
+)
+BEGIN
+    DROP PROCEDURE InsertCurrentPage
+END
+go
+
+create procedure InsertCurrentPage
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @versionTimestamp DATETIME,
+    @startOffset BIGINT,
+    @endOffset BIGINT,
+    @snapshotCount INT
+as
+begin
+    -- If an existing page has a Start before InsertingStart and an End beyond InsertingStart (that is, they overlap or are adjacent where the existing page is on the left
+    -- then coalesce the page we're inserting to include the existing page (move the InsertingStart value to the left). Only coalesce if the page has the same snapshot count for GetPageRangesDiff reasons.
+    SELECT @startOffset = StartOffset
+    FROM CurrentPage
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &lt; @startOffset
+        AND EndOffset &gt;= @startOffset
+        AND SnapshotCount = @snapshotCount
+
+    -- If an existing page has a Start before InsertingEnd and an End beyond InsertingEnd (that is, they overlap or are adjacent where the existing page is on the right
+    -- then coalesce the page we're inserting to include the existing page (move the InsertingEnd value to the right). Only coalesce if the page has the same snapshot count for GetPageRangesDiff reasons.
+    SELECT @endOffset = EndOffset
+    FROM CurrentPage
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &lt;= @endOffset
+        AND EndOffset &gt; @endOffset
+        AND SnapshotCount = @snapshotCount
+
+    -- If an existing page has a Start before InsertingEnd and an End beyond InsertingEnd (that is, they overlap where the existing page is on the right), then trim the existing page to be
+    -- adjacent (move the ExistingStart value to the right). Only trim if the page does not have the same snapshot count for GetPageRangesDiff reasons (otherwise, they should have been coalesced).
+    UPDATE CurrentPage
+    SET StartOffset = @endOffset
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+        AND StartOffset &gt;= @startOffset
+        AND StartOffset &lt; @endOffset
+        AND EndOffset &gt; @endOffset
+        AND SnapshotCount &lt;&gt; @snapshotCount
+
+    -- If an existing page has a Start before InsertingStart and an End beyond InsertingStart (that is, they overlap where the existing page is on the left), then trim the existing page to be
+    -- adjacent (move the ExistingEnd value to the left). Only trim if the page does not have the same snapshot count for GetPageRangesDiff reasons (otherwise, they should have been coalesced).
+    UPDATE CurrentPage
+    SET EndOffset = @startOffset
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+        AND StartOffset &lt; @startOffset
+        AND EndOffset &gt; @startOffset
+        AND EndOffset &lt;= @endOffset
+        AND SnapshotCount &lt;&gt; @snapshotCount
+
+    -- This is the most confusing case -- an insert of a page wholly within another larger page where the snapshotcount is unequal, so we need to split the existing range into two bookend ranges.
+    IF (EXISTS (
+            SELECT 1 FROM CurrentPage
+            WHERE AccountName = @accountName
+            AND ContainerName = @containerName
+            AND BlobName = @blobName
+            AND StartOffset &lt; @startOffset
+            AND EndOffset &gt; @endOffset
+            AND SnapshotCount &lt;&gt; @snapshotCount ) )
+    BEGIN
+        DECLARE @previousEndOffset BIGINT
+        DECLARE @oldSnapshotCount INT
+        SELECT @previousEndOffset = EndOffset, @oldSnapshotCount = SnapshotCount
+        FROM CurrentPage
+        WHERE AccountName = @accountName
+            AND ContainerName = @containerName
+            AND BlobName = @blobName
+            AND StartOffset &lt; @startOffset
+            AND EndOffset &gt; @endOffset
+            AND SnapshotCount &lt;&gt; @snapshotCount
+
+        -- Trim the existing page to be the left bookend first
+        UPDATE CurrentPage
+        SET EndOffset = @startOffset
+        WHERE AccountName = @accountName
+            AND ContainerName = @containerName
+            AND BlobName = @blobName
+            AND VersionTimestamp = @versionTimestamp
+            AND StartOffset &lt; @startOffset
+            AND EndOffset &gt; @endOffset
+            AND SnapshotCount &lt;&gt; @snapshotCount
+
+        -- Next, insert right bookend
+        INSERT INTO CurrentPage(AccountName, ContainerName, BlobName, VersionTimestamp, StartOffset, EndOffset, SnapshotCount)
+        VALUES(@accountName, @containerName, @blobName, @versionTimestamp, @endOffset, @previousEndOffset, @oldSnapshotCount)
+    END
+
+    -- Clean up any existing pages that are overridden by coalesce operation.
+    DELETE FROM CurrentPage
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &gt;= @startOffset
+        AND StartOffset &lt; @endOffset
+
+    -- Insert new, possibly coalesced page.
+    INSERT INTO CurrentPage (AccountName, ContainerName, BlobName, VersionTimestamp, StartOffset, EndOffset, SnapshotCount)
+    VALUES (@accountName, @containerName, @blobName, @versionTimestamp, @startOffset, @endOffset, @snapshotCount)
+
+    -- Update LMT.
+    UPDATE Blob
+    SET LastModificationTime = GETUTCDATE()
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+end
+
+go
+
+IF EXISTS (
+    SELECT * FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE ROUTINE_NAME = 'DeleteCurrentPage'
+)
+BEGIN
+    DROP PROCEDURE DeleteCurrentPage
+END
+go
+
+create procedure DeleteCurrentPage
+    @accountName varchar(24),
+    @containerName varchar(63),
+    @blobName nvarchar(256),
+    @versionTimestamp DATETIME,
+    @startOffset BIGINT,
+    @endOffset BIGINT
+as
+begin
+    -- If both the start and end are within a single current page,
+    -- the page needs to be split, so make a copy
+    INSERT INTO CurrentPage
+    SELECT AccountName, ContainerName, BlobName, VersionTimestamp, @endOffset, EndOffset, SnapshotCount
+    FROM CurrentPage
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &lt; @startOffset
+        AND EndOffset &gt; @endOffset
+
+    -- If the end offset of some existing page is in the middle of this page, trim the right end to clear the space where we're deleting
+    UPDATE CurrentPage
+    SET EndOffset = @startOffset
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &lt; @startOffset
+        AND EndOffset &gt; @startOffset
+
+    -- If the start offset of some page is in the middle of this page, trim the left end to clear the space where we're deleting
+    UPDATE CurrentPage
+    SET StartOffset = @endOffset
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &lt; @endOffset
+        AND EndOffset &gt; @endOffset
+
+    -- Remove anything that starts between @startOffset AND @endOffset (any pages fully contained within the deletion range)
+    DELETE FROM CurrentPage
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND StartOffset &gt;= @startOffset
+        AND EndOffset &lt;= @endOffset
+
+    UPDATE Blob
+    SET LastModificationTime = GETUTCDATE()
+    WHERE AccountName = @accountName
+        AND ContainerName = @containerName
+        AND BlobName = @blobName
+        AND VersionTimestamp = @versionTimestamp
+end
+
+go
+</value>
+  </data>
+  <data name="ForeignKeys" xml:space="preserve">
+    <value>ALTER TABLE [dbo].[BlobContainer] DROP CONSTRAINT [Account_BlobContainer]
+GO
+
+ALTER TABLE [dbo].[BlobContainer]
+WITH CHECK
+ADD CONSTRAINT [Account_BlobContainer] FOREIGN KEY([AccountName])
+REFERENCES [dbo].[Account] ([Name])
+ON DELETE CASCADE
+GO
+
+
+ALTER TABLE [dbo].[Blob] DROP CONSTRAINT [BlobContainer_Blob]
+GO
+
+ALTER TABLE [dbo].[Blob]
+WITH CHECK
+ADD CONSTRAINT [BlobContainer_Blob] FOREIGN KEY([AccountName], [ContainerName])
+REFERENCES [dbo].[BlobContainer] ([AccountName], [ContainerName])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[CommittedBlock] DROP CONSTRAINT [BlockBlob_CommittedBlock]
+GO
+
+ALTER TABLE [dbo].[CommittedBlock]
+WITH CHECK
+ADD CONSTRAINT [BlockBlob_CommittedBlock] FOREIGN KEY([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+REFERENCES [dbo].[Blob] ([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[BlockData] DROP CONSTRAINT [BlockBlob_BlockData]
+GO
+
+-- Do not delete the blocks when a snapshot is deleted, since it may be referenced by other snapshots.
+--ALTER TABLE [dbo].[BlockData]
+--WITH CHECK
+--ADD CONSTRAINT [BlockBlob_BlockData] FOREIGN KEY([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+--REFERENCES [dbo].[Blob] ([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+--ON DELETE CASCADE
+--GO
+
+ALTER TABLE [dbo].[Page] DROP CONSTRAINT [PageBlob_Page]
+GO
+
+ALTER TABLE [dbo].[Page]
+WITH CHECK
+ADD CONSTRAINT [PageBlob_Page] FOREIGN KEY([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+REFERENCES [dbo].[Blob] ([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[CurrentPage] DROP CONSTRAINT [PageBlob_CurrentPage]
+GO
+
+ALTER TABLE [dbo].[CurrentPage]
+WITH CHECK
+ADD CONSTRAINT [PageBlob_CurrentPage] FOREIGN KEY([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+REFERENCES [dbo].[Blob] ([AccountName], [ContainerName], [BlobName], [VersionTimestamp])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[QueueContainer] DROP CONSTRAINT [Account_QueueContainer]
+GO
+
+ALTER TABLE [dbo].[QueueContainer]
+WITH CHECK
+ADD CONSTRAINT [Account_QueueContainer] FOREIGN KEY([AccountName])
+REFERENCES [dbo].[Account] ([Name])
+ON DELETE CASCADE
+GO
+
+
+ALTER TABLE [dbo].[QueueMessage] DROP CONSTRAINT [QueueContainer_QueueMessage]
+GO
+
+ALTER TABLE [dbo].[QueueMessage]
+WITH CHECK
+ADD CONSTRAINT [QueueContainer_QueueMessage] FOREIGN KEY([AccountName], [QueueName])
+REFERENCES [dbo].[QueueContainer] ([AccountName], [QueueName])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[TableContainer] DROP CONSTRAINT [Account_TableContainer]
+GO
+
+ALTER TABLE [dbo].[TableContainer]
+WITH CHECK
+ADD CONSTRAINT [Account_TableContainer] FOREIGN KEY([AccountName])
+REFERENCES [dbo].[Account] ([Name])
+ON DELETE CASCADE
+GO
+
+
+ALTER TABLE [dbo].[TableRow] DROP CONSTRAINT [TableContainer_TableRow]
+GO
+
+ALTER TABLE [dbo].[TableRow]
+WITH CHECK
+ADD CONSTRAINT [TableContainer_TableRow] FOREIGN KEY([AccountName], [TableName])
+REFERENCES [dbo].[TableContainer] ([AccountName], [TableName])
+ON DELETE CASCADE
+GO
+</value>
+  </data>
+  <data name="CreateViewTemplate" xml:space="preserve">
+    <value>SELECT 1 FROM INFORMATION_SCHEMA.SCHEMATA
+WHERE SCHEMA_NAME = 'AccountNameTemplate'
+go
+
+CREATE SCHEMA AccountNameTemplate
+go
+
+SELECT 1 FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'AccountNameTemplate'
+  AND TABLE_NAME = 'TableNameTemplate'
+go
+
+--region IgnoreTemplate
+/*
+--endregion
+--region CreateViewTemplate
+CreateOrAlterTemplate VIEW [AccountNameTemplate].[TableNameTemplate]
+    --region IgnoreTemplate
+*/
+CREATE VIEW [AccountNameTemplate].[TableNameTemplate]
+    --endregion IgnoreTemplate
+AS
+SELECT PartitionKey, RowKey, [Timestamp]
+    --region IgnoreTemplate
+       , Data.value('(/Properties/PropertyNameTemplate)[1]', 'int') AS PropertyNameTemplate
+/*
+    --endregion
+    --region ColumnTemplate
+       , Data.value('(/Properties/PropertyNameTemplate)[1]', 'TypeNameTemplate') AS PropertyNameTemplate
+    --endregion ColumnTemplate
+    --region IgnoreTemplate
+*/
+    --endregion IgnoreTemplate
+FROM dbo.TableRow
+WHERE AccountName = 'AccountNameTemplate'
+  AND TableName = 'TableNameTemplate'
+go
+
+--endregion CreateViewTemplate
+</value>
+  </data>
+  <data name="LastModificationTimeTriggers" xml:space="preserve">
+    <value>CREATE TRIGGER BlobContainer_OnUpdate
+   ON dbo.BlobContainer
+   AFTER UPDATE
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+    IF (EXISTS (
+        SELECT 1
+        FROM inserted JOIN deleted
+        ON (inserted.IsLeaseOp = 0 OR inserted.IsLeaseOp IS NULL)))
+	BEGIN
+		-- Insert statements for trigger here
+		UPDATE BlobContainer
+		SET LastModificationTime = GETUTCDATE()
+		FROM inserted JOIN BlobContainer
+		ON inserted.AccountName = BlobContainer.AccountName
+		  AND inserted.ContainerName = BlobContainer.ContainerName
+	END
+	-- If Lease Operation, set back the lease op flag to not lease op
+    ELSE
+    BEGIN
+        IF (EXISTS (
+            SELECT 1
+            FROM inserted JOIN deleted
+            ON inserted.IsLeaseOp = 1))
+        BEGIN
+            UPDATE BlobContainer
+		    SET IsLeaseOp = 0
+		    FROM inserted JOIN BlobContainer
+		    ON  inserted.AccountName = BlobContainer.AccountName
+		        AND inserted.ContainerName = BlobContainer.ContainerName
+        END
+    END
+END
+GO
+
+CREATE TRIGGER Blob_OnInsert
+   ON dbo.Blob
+   AFTER INSERT
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+	UPDATE Blob
+	SET LastModificationTime = '1753-01-01'
+	FROM inserted JOIN Blob
+	ON  inserted.AccountName = Blob.AccountName
+	  AND inserted.ContainerName = Blob.ContainerName
+	  AND inserted.BlobName = Blob.BlobName
+	  AND inserted.VersionTimestamp = Blob.VersionTimestamp
+	WHERE inserted.IsCommitted = 0
+
+END
+GO
+
+CREATE TRIGGER Blob_OnDelete
+   ON dbo.Blob
+   AFTER DELETE
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+    -- Delete all blocks that are not referenced by any committed block.
+    -- We could make this smarter by restricting the blocks to a time range.
+    -- and adding an index on BlockVersion
+	DELETE FROM BlockData
+	FROM deleted
+	WHERE  deleted.AccountName = BlockData.AccountName
+	  AND deleted.ContainerName = BlockData.ContainerName
+	  AND deleted.BlobName = BlockData.BlobName
+	  AND NOT EXISTS (
+		SELECT 1
+		FROM CommittedBlock AS c
+		WHERE BlockData.AccountName = c.AccountName
+		  AND BlockData.ContainerName = c.ContainerName
+		  AND BlockData.BlobName = c.BlobName
+		  AND BlockData.VersionTimestamp = c.BlockVersion )
+END
+GO
+
+CREATE TRIGGER Blob_OnUpdate
+   ON dbo.Blob
+   AFTER UPDATE
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+    IF (EXISTS (
+        SELECT 1
+        FROM inserted JOIN deleted
+        ON	ISNULL(inserted.UncommittedBlockIdLength, -1) = ISNULL(deleted.UncommittedBlockIdLength, -1)
+            AND ( inserted.IsLeaseOp = 0 OR inserted.IsLeaseOp IS NULL)))
+    BEGIN
+		UPDATE Blob
+		SET LastModificationTime = GETUTCDATE()
+		FROM inserted JOIN Blob
+		ON  inserted.AccountName = Blob.AccountName
+		  AND inserted.ContainerName = Blob.ContainerName
+		  AND inserted.BlobName = Blob.BlobName
+		  AND inserted.VersionTimestamp = Blob.VersionTimestamp
+		WHERE inserted.IsCommitted = 1 OR inserted.IsCommitted IS NULL
+    END
+    -- If Lease Operation, set back the lease op flag to not lease op
+    ELSE
+    BEGIN
+        IF (EXISTS (
+            SELECT 1
+            FROM inserted JOIN deleted
+            ON inserted.IsLeaseOp = 1))
+        BEGIN
+            UPDATE Blob
+		    SET IsLeaseOp = 0
+		    FROM inserted JOIN Blob
+		    ON  inserted.AccountName = Blob.AccountName
+		        AND inserted.ContainerName = Blob.ContainerName
+		        AND inserted.BlobName = Blob.BlobName
+		        AND inserted.VersionTimestamp = Blob.VersionTimestamp
+        END
+    END
+END
+GO
+
+CREATE TRIGGER BlockData_OnUpdate
+   ON dbo.BlockData
+   AFTER INSERT, UPDATE
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+    DECLARE @oldLength INT
+    SELECT @oldLength = Blob.UncommittedBlockIdLength
+    FROM Blob
+    JOIN inserted
+      ON Blob.AccountName = inserted.AccountName
+      AND Blob.ContainerName = inserted.ContainerName
+      AND Blob.BlobName = inserted.BlobName
+      AND inserted.VersionTimestamp = Blob.VersionTimestamp
+    WHERE inserted.IsCommitted = 0
+      AND Blob.UncommittedBlockIdLength IS NOT NULL
+      AND Blob.UncommittedBlockIdLength &lt;&gt; DATALENGTH(inserted.BlockId)
+
+    IF (@oldLength IS NOT NULL)
+    BEGIN
+        RAISERROR('BlockIdMismatch', 16, 1)
+        ROLLBACK TRANSACTION
+    END
+
+    UPDATE Blob
+    SET UncommittedBlockIdLength = DATALENGTH(inserted.BlockId)
+    FROM inserted
+    WHERE Blob.AccountName = inserted.AccountName
+      AND Blob.ContainerName = inserted.ContainerName
+      AND Blob.BlobName = inserted.BlobName
+      AND Blob.VersionTimestamp = inserted.VersionTimestamp
+      AND inserted.IsCommitted = 0
+      AND UncommittedBlockIdLength IS NULL
+
+END
+GO
+
+CREATE TRIGGER TableRow_OnInsert
+   ON dbo.TableRow
+   AFTER INSERT
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+	DECLARE @rowLength INT
+	SELECT @rowLength = (DATALENGTH(inserted.PartitionKey) + DATALENGTH(inserted.RowKey) + DATALENGTH(inserted.Timestamp) + DATALENGTH(inserted.Data))
+	FROM inserted
+
+	IF (@rowLength &gt;= 1024 * 1024)
+	BEGIN
+        RAISERROR('EntityTooLarge', 16, 1)
+        ROLLBACK TRANSACTION
+
+        RETURN
+	END
+END
+GO
+
+CREATE TRIGGER TableRow_OnUpdate
+   ON dbo.TableRow
+   AFTER UPDATE
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+
+	DECLARE @rowLength INT
+	SELECT @rowLength = (DATALENGTH(inserted.PartitionKey) + DATALENGTH(inserted.RowKey) + DATALENGTH(inserted.Timestamp) + DATALENGTH(inserted.Data))
+	FROM inserted
+
+	IF (@rowLength &gt;= 1024 * 1024)
+	BEGIN
+        RAISERROR('EntityTooLarge', 16, 1)
+        ROLLBACK TRANSACTION
+
+        RETURN
+	END
+
+    -- Insert statements for trigger here
+    UPDATE TableRow SET [Timestamp] = GETUTCDATE()
+    FROM inserted JOIN TableRow
+    ON  inserted.AccountName = TableRow.AccountName
+      AND inserted.TableName = TableRow.TableName
+      AND inserted.PartitionKey = TableRow.PartitionKey
+      AND inserted.RowKey = TableRow.RowKey
+END
+GO
+
+</value>
+  </data>
+</root>

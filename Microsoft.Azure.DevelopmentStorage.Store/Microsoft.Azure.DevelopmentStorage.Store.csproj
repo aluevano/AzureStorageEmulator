@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectGuid>{AFF45AF3-1376-4FE9-8211-BCFCC940C868}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>Microsoft.Azure.DevelopmentStorage.Store</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.DevelopmentStorage.Services">
+      <HintPath>.\Microsoft.Azure.DevelopmentStorage.StoreReferences\Microsoft.Azure.DevelopmentStorage.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.Data.Services">
+      <HintPath>.\Microsoft.Azure.DevelopmentStorage.StoreReferences\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbBlobContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbQueueManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\ExpressionUtility.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlobServiceEntry.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbTableRowQueryProvider_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlobLeaseInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbTableRowQueryable_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlockBlobDataManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlobServiceMetaData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\QueueServiceEntry.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\CommittedBlock.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlockBlobMetaInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\CopyBlobManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlockForCopy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\PageRegionsForCopy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DevStoreTableQueryVisitor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\LinqMethodName.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\TableContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\PointQueryTracker.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\OpenTypePropertySqlMetaData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DevelopmentStorageDbDataContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\ProcessingState.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\ParameterRecord.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Blob.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BaseBlob.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Condition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlobHttpDownloader.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Page.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlockBlobGarbageCollector.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlobContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlockBlob.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\CurrentPage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\PageBlob.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbTableDataContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbQueryBuilder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DeletedAccount.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlobDbUploader.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\FileLoggerProvider.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\FileQuantileDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbUtilityResourceBuilder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\ContainerLeaseInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\QueueContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\FileStringDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbStorageAccount.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\LinqToXmlTranslator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\ServiceSettingsSerializer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Properties\Settings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\TableServiceEntry.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\XmlUtility.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Resources.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DevStoreTableServiceConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbStorageHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\UpdateKind.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbStorageManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\ChangeDescription.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbStorageStamp.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\StringTemplate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\QueueMessage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Account.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\SqlExceptionManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\TableRow.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbQueueContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbTableContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbTableDataContextFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Receipt.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\BlockData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbBlobContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbListBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DevStoreBlockBlobFileParameters.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbPageBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbQueueStatistics.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbMessageData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbBlobObjectCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\DbQueueContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Microsoft.WindowsAzure.DevelopmentStorage.Store\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

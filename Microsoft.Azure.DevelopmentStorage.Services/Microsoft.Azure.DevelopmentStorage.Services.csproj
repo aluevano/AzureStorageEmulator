@@ -1,0 +1,3549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectGuid>{695292D6-C7FF-4D45-9F4C-E84EADA229F6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>Microsoft.Azure.DevelopmentStorage.Services</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Services">
+      <HintPath>.\Microsoft.Azure.DevelopmentStorage.ServicesReferences\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>.\Microsoft.Azure.DevelopmentStorage.ServicesReferences\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>.\Microsoft.Azure.DevelopmentStorage.ServicesReferences\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetErrorDetailsForExceptionDelegate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ListRowSummaryResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ILeaseInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapperCreator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\TableBatchDuplicateRowKeyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfRangeConditionExtractorV2.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobServiceVersion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper0Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IProcessor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\AuthenticationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper1Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\DeleteType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IndexBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ListBlobSummaryResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper2Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ComparisonOperator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper3Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\AuthenticationManagerHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SequenceNumberUpdateType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper4Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ContainerPropertyNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\AuthenticationMethod.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IUpdateOptions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SchemeParamsParserMethod.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ListMessagesMarker.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper5Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\MetadataOption.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ServiceMetadataUpdatePolicy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\BlobStatusEntries.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CopyAction.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ListRowSummaryMarker.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper6Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\FECopyType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\XStoreArgumentOutOfRangeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CopyBlobType2.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper7Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobGenerationIdMismatchException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobObjectCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CopySourceInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapper8Creator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CopyBlobOperationInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\GetAuxStreamsResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobObjectHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AuxStreamGroupInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\OverwriteOption.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\GeneratePutBlobServiceMetadata.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobGenerationIdNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ProjectedWrapperManyCreator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobPreviousSnapshotGenerationIdNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobSummary.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobPreviousSnapshotNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IListBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\InvalidBlockIdProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IIndexBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobPreviousSnapshotTooNewException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\TableResourceContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\CreateQueueResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobSummaryCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\IListQueuesResultCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\IListQueuesResultQueueProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IFileRegion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\UtilityComputingConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobObjectCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\XFileTableType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IPageRangeCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ColumnRefExpressionNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\XFilesColumnIndex.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobSummary.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\OperationType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobSummaryCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlockCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\PremiumTableStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\ArchiveCompletionOperationStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlockLists.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MessageCanonicalizer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlockLists.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IPageRange.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\UtilityComputingHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IGetPageRangeListResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MessageHashFunctions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\UtilityRowResourceProperty.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\NephosAuthenticationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\GetPageRangeListResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SecretKeyPermissions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BasicHttpProcessor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\UtilityRow.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SecretKeyValidator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SecretKeyV3.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\UtilityTable.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\AbstractQueueManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\UtilityTableResourceProperty.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SecretKeyListV3.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MetadataEncoding.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ArchiveOperationCompletionData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\QueueException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\XfeTableSASAuthorizationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.UtilityComputing\KeyBounds.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\AnalyticsSettingsVersion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\QueueNotEmptyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\XFEBlobAuthenticationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StampSet.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\CreateQueueFailedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\PopReceiptMismatchException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountServiceMetadata.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\InvalidParameterException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountXlsServiceMetadata.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\MetricsType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\MessageNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\PushedMessage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ContainerStats.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\GeoReplicationStats.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\ListQueuesResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\QueueContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\ListQueuesResultQueueProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\PeekedMessage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\PerRequestStorageManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ITableServerCommand.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ITableServerCommand_out TResult_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SignedAccessHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MultipleValueDictionary_TKey, TValue_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\PoppedMessage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ITableServerCommandFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\QueueContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\QueueManagerConfiguration.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\PageRange.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageAccountExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\QueueProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageManagerExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBusinessLogicFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IPutBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageStampExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\UpdateOptions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\NephosAssertionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobAlreadyExistsException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IListBlobsResultCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\PerformanceCounterWrapper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobContentTooLargeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ReadOnlyCollection_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlockListTooLongException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobMD5MigrationException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ReadOnlyDictionary_TKey, TValue_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\BlobSignedAccessHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobModifiedWhileReadingException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ListBlobsResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IListContainersResultCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\RemainingTime.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\EntryPointType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\AnalyticsSettingsHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ProviderInjection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobWriteProtectedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ListContainersResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IListBlobResultsBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ServiceStatsHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\IAuthenticationResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CopySourceCannotBeIncrementalCopyBlobException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\AuthenticationResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\OperationNotAllowedOnIncrementalCopyBlobException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\OperationStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IncrementalCopyOfEarlierSnapshotNotAllowedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\VnetSourceDetails.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IncrementalCopyBlobMismatchException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageAccount.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\TranslateExceptionDelegate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IncrementalCopyBlobPreviousSnapshotDoesNotExistException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ListBlobResultsBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IListContainersResultContainerProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\XFEQueueAuthenticationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageStamp.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\Helpers.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\TableContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ConditionNotMetException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ContainerAlreadyExistsException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\TableContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ContainerNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ListContainersResultContainerProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IContainerProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CopyIdMismatchException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ContainerProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\QueueSignedAccessHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\DeprecatedResourceNameException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IncrementalCopySourceMustBeSnapshotException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\BaseAclSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Service\BaseServiceManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidSourceBlobTypeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IPutBlobResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidSourceBlobUrlException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlobResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ServiceManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ICrc64Md5Result.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IPutBlockResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidBlobRegionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlockResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IAppendBlockResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\AppendBlockResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IPutBlobFromBlocksResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidBlobTypeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\RequestContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\XFETableAuthenticationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IHttpListenerContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlobFromBlocksResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IHttpListenerRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ISnapshotBlobResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IHttpListenerResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidVersionForCopyAppendBlobOperationException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SnapshotBlobResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidVersionForBlobTypeInBlobListException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IPutPageResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidBlockException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutPageResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpListenerRequestAdapter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IClearPageResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidBlockListException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ClearPageResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ICopyBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidGeoInformationException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\CopyBlobProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ICopyBlobResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpListenerResponseAdapter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\CopyBlobResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpListenerContextAdapter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ISetBlobMetadataResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidMarkerException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\Comparison.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetBlobMetadataResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ISetBlobPropertiesResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\TableSignedAccessHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ConstChars.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\UrlComponents.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\StampResource.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\LocationResource.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InvalidResourceNameException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetBlobPropertiesResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ActivityNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ILeaseInfoResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\QueryParams.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\QueryParamValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\LeaseInfoResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseBrokenException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\CompConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBlobCopyInformationResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BlobCopyInformationResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\XmlElementNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseDurationNotInfiniteException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASAccessRestriction.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\HeaderNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASAccessLevel.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\HeaderValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\AuthenticationSchemeNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\FileSASAccessLevel.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ParameterLimits.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASExtraPermission.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASPermission.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\MethodNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseHeldException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SasResourceType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\NephosErrorCodeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SasService.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseLostException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SasProtocol.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\BlobErrorCodeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\FileErrorCodeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\QueueErrorCodeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\AccountErrorCodeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseNotPresentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\VersionStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\AccountSasHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\AuthorizationInformation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\BlockListTypeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\PermissionLevel.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ServiceErrorStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\SasType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\NoPendingCopyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASAccessPolicy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\NephosUserErrorResponseMessages.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\PageWriteHeaderValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\SASAuthorizationParameters.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\NephosFileWriteHeaderValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\LeaseActionHeaderValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ObjectContentTypeOverLimitException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\IncludeQueryParamValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\DeleteSnapshotsHeaderValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ObjectMetadataOverLimitException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\SequenceNumberActionHeaderValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ExternalAccountType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ObjectNameLengthOverLimitException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ObjectServiceMetadataOverLimitException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\SpecialNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\PageRangeInvalidException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ResourceTypeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\SasServiceTypeString.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\UriStyle.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\PendingAccountTransactionExistsException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\BlobTypeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\NephosTypeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\PendingCopyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\ServerHeaderStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\AuthorizationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\LeaseStatusStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\LeaseStateStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SecondaryWriteNotAllowedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\LeaseDurationStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\CopyBlobActionStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\CopyBlobStatusStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\CopyTypeQueryValues.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\BackgroundFillPolicy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SequenceNumberConditionNotMetException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ServiceHttpConstants\DateTimeConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AppendPositionConditionNotMetException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\MaxBlobSizeConditionNotMetException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlockCountExceedsLimitException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\SASUtilities.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ServiceManagerConfiguration.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SequenceNumberIncrementTooLargeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\AuthorizationCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IListFilesResultCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\ContainerAclSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\RealQueueManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IListFileResultsFileProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.QueueManager.XAC\QueueHelpers.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ServerBusyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\CannotCopyAcrossAccountsException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\UncommittedBlockCountExceedsLimitException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\NephosStorageException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\UnsatisfiableConditionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\NephosStorageDataCorruptionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\UnsupportedPermissionInStoredAccessPolicyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\VersionNotSupportedOnStorageStampException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\DoubleConverter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEventBinding.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEventBindingGroup.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\CannotVerifyCopySourceException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\XStoreArgumentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\VersioningHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEventException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\XmlUtilities.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\VersioningConfigurationLookup.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Feb15RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ETagHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEventMetadata_TEvent_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\ContainerUnauthorizedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\EventIDCreator.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEventParameterAttribute.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\CrcUtils.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEventStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SnapshotsPresentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RestMethod.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Utils.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BillingNativeMethods.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Apr15RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\NativeMethods.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\UriCanonicalizeAsFilePathSettingType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\TransformExceptionDelegate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CorsPreflightFailureException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CorsPreflightMissingHeaderException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BasicHttpProcessorWithAuthAndAccountContainer_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Jul15RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\VersionedRequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CommonStatusEntries.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\NephosAuthorizationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Dec15RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\AccumulatorStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ConfigurationHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\MD5InvalidException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\FatalServerCrashingException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Oct08RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\InvalidStreamLengthException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequestIpThrottledException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Feb16RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ForbiddenRequestAbortedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\MD5MismatchException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Apr09RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\VerbNotSupportedProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\May16RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequiredHeaderNotPresentProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Jul09RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Oct16RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\HttpsRequiredProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\MD5ReaderStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\CrcStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Sep09RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\AccountRequiresHttpsException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Apr17RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Aug11RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequiredXmlNodeNotPresentProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\NephosUnauthorizedAccessException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\MD5WriterStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\InvalidQueryParameterProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\Container.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Feb12RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\HeaderNotSupportedProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\XFEBlobAuthorizationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\XFEQueueAuthorizationManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\IAuthorizationResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Jul13RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\XmlNodeNotSupportedProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\AuthorizationResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authorization\AuthorizationFailureReason.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\ILoggerProvider.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\UnexpectedVersionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\DummyLoggerProvider.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IStringDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\DummyStringDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Aug13RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IQuantileDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\CrcReaderStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableProtocolHead.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\DummyQuantileDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\InvalidHeaderProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BaseBlobContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\ConsoleLoggerProvider.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\ConsoleQuantileDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Versioning\Feb14RequestSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\InvalidXmlNodeProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\ConsoleStringDataEventStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\CrcMemoryStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\OutOfRangeQueryParameterProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\EventStreamAttribute.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\LoggerException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\OutOfRangeXmlNodeCountProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\OperationContextWithAuthAndAccountContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\InvalidUrlProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\CrcMismatchException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\OutOfRangeXmlArgumentProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BothCrc64AndMd5RangeHeaderPresentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\UnknownVerbProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ComputeMd5HeaderUsedWithOtherCrc64Md5HeaderException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableProtocolHeadHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\OperationType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\CrcVerifierStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\Resource.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\EmptyMetadataKeyProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\LoggerFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\OperationInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\RequestStartedCallback.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\InvalidCharacterProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\LoggerProvider.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\CheckPermissionDelegate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\ContinuationTokenAvailableCallback.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\QueryRowCommandPropertiesAvailableCallback.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IQuantileLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IXfeUserMetricsEventsStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\NullOrEmptyQueryParameterProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IUserMetricsLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IFrontEndPerfMetricsEventsStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\QueryRowCommandProperties.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\HttpProcessorConfiguration.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IFrontEndPerfMetricsLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IServiceEntry.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\ContinuationTokenCreatedEventArgs.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IFrontEndGeneralEventsStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\IUtilityTableDataContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IServiceEntrySink.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IFrontEndGeneralEventLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.DataModel\IUtilityTableDataContextFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\UnknownQueryParameterProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\WrapperStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\ByteCountEventArgs.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\IngressEgressUsageContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ServiceRequestHandler.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Providers.XTable\TableDataContextHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\RollingLogFileTraceListener.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\Trace.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequestEntityTooLargeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\NephosRESTEventStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ServiceConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequestOrigin.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncCallTracker.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequestFailureMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequestRedirectionMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\PingMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\InvalidXmlProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\PreAuthenticationFailureMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\RollingLogStreamWriter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\HostInformationNotPresentProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IPThrottlingFailureMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncCallTrackingTraceListener.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\RequestUrlFailedToParseProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\TraceSourceLoggerProvider.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\AuthenticationFailureMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\EndToEndLogging.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IFrontEndPerfMetricsEventSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\PreOperationFailureMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBaseObjectCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobObjectCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\GetAccountPropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncResultBase.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\HttpVersionNotSupportedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ConditionHeaderPresentProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BaseBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncIteratorContextBase.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\MultipleConditionHeaderProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncIteratorContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncIteratorContext_ResultDataType_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\UnrecognizedIfMatchConditionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncResult_ResultDataType_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BothCrc64AndMd5HeaderPresentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BothCrc64AndMsMd5HeaderPresentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncResultWaiter_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\TallyKeepingStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncResultWaiterComparer_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CopySourceIfModifiedConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfUnmodifiedConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CopySourceIfUnmodifiedConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\NephosErrorDetails.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ListBlobObject.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListContainersOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\NephosStatusEntry.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListFilesOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ProcessorCompletionEventArgs.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfMatchConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ServiceEntryClassAttribute.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Streams\AsyncCrcStreamCopy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\SymmetricCryptography.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\IAccountIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CopySourceIfMatchConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListBlobsOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncSemaphore.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\GetBlockListOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfNoneMatchConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\GetPageRangeListOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\SemaphoreQueueExhaustedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ArchiveBlobContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\CopySourceIfNoneMatchConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfRangeConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\HttpBlobRequestProcessedMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\AccountIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\XmlListEncoder_ListType, ListEntryType, ListOperationContext_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\SummaryResultEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\MultipleConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BlobOperationMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBlobContentMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ListContainerSummaryResultEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfModifiedConditionExtractorV2.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncSignal_SignalDataType_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\SignedAccessAccountIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfUnmodifiedConditionExtractorV2.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BlobContentMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBlobOperationWithRequestContentMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ListContainersAclXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ResourceExistenceCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\TableSignedAccessAccountIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\OperationTypeForConditionParsing.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BlockMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IBlobOperationWithResponseContentMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfMatchConditionExtractorV2.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\AccountSasAccessIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ConditionInformation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfNoneMatchConditionExtractorV2.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\CreateContainerMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\DeleteContainerMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\AccountAccessRulesIdentifier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\SupportedAuthScheme.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ConditionalHeaders.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncStreamCopy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\DeleteBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\BufferWrapper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\EmptyBufferWrapper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\AcquireContainerLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetContainerPropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\AuthDataEntry.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetContainerAclMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\IAuthenticationInformation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\BufferPool.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BreakContainerLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ChangeContainerLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\RenewContainerLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\BufferPoolOriginalWeakReferenceLocking.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\IPerfTimer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ReleaseContainerLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutGeoMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\DateTimeTimer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\IfModifiedConditionExtractor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\PerfTimerFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\HttpRestProcessor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ListBlobsMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\RenewBlobLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutGeoVerificationMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\HighResolutionDateTimeTimer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ListContainersMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ReleaseBlobLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BlobPreflightRequestMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\AuthenticationInformation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutGeoRepairMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\Duration.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\BreakBlobLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\RethrowableWrapperBehavior.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Account\SharedKeyAuthInfoHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\ExceptionClonerAttribute.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ChangeBlobLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\CopyBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\OperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlobMetadataMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\AuthenticationFailureException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\IncrementalCopyBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\ExceptionCloner.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlobLeaseInfoMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\OperationImpl.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\AbortCopyBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlobPropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\InvalidAuthenticationInfoException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncHelpers.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlockListMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetBlobPropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\RethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlockListMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\NoResults.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListBaseObjectsOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\LateBoundVoidMethod.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetBlobMetadataMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListSharesXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\LateBoundMethod.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutBlockMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobObjectCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ISequenceNumberUpdate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Authentication\DstsAuthenticationFailureException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SnapshotBlobMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListBlocksXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetBlobTierMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\Block.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IContainerCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\AppendBlockMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SequenceNumberUpdate.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IFileObjectCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetContainerMetadataMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\RecordArchiveOperationStatusMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListPageRangesXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\PutPageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\ReflectionExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetContainerMetadataMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetContainerAclMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\ClearPageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\FileObjectCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBaseRegion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListFileRangesXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobRegion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetPageRegionsMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\ArgumentNullRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\QueueOperationMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListBlobSummaryResultEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\ListQueuesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\AcquireBlobLeaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobRegion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\ArgumentOutOfRangeRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\QueuePreflightRequestMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ContainerCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlock.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlobServicePropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\GeoReplicationStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListFilesXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IContainerCollection_TContainer_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\IQueueMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\GetQueueServicePropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\GetQueueMetadataMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IQueueContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ITableContainerCollection.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ContainerType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\HttpQueueRequestProcessedMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\SetBlobServicePropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\SetQueueServicePropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\GetBlobServiceStatsMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableDataServiceV3_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\GetQueueAclMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\EmulatorStatusEntries.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IContainerSnapshotInformation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\SetQueueMetadataMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\XmlListEncoderHelpers.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\CreateQueueMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\SetQueueAclMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBaseBlobContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\ProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\ArgumentRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\DeleteQueueMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\OperationType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\GetQueueServiceStatsMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\InvalidOperationRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\GetMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\ListMessagesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\FeatureNotSupportedByEmulatorException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobContainerExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\NotImplementedRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IQueueOperations.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\GetMessagesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\ListQueuesOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IQueueContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IMessageData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IQueueMessageReceipt.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\PeekMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IQueueStatistics.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\MessageListingContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\NotSupportedRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ITableContainer.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobGeoSenderInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\FutureVersionProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IBlobCopyInformation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\PeekMessagesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\INormalLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\IDebugLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListBlobsXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\INormalAndDebugLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccessTier.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccessTierTransitionState.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IAuthLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ArchiveOperationType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IRestProtocolHeadLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ArchiveOperationStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logging\Logger_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Logger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\NullReferenceRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\NormalAndDebugLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobPropertyNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlobSummaryPropertyNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Common\TableXmlConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlockListTypes.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\BlockSource.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Common\TableErrorCodeStrings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\OverflowRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\PutMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.Protocols.Rest\ListContainersXmlListEncoder.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Common\TableUserErrorResponseMessages.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\IErrorResponseWriter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LeaseState.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\UpdateMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableManagerConfiguration.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\ClearMessagesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\RethrowableWrapperException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.TableManager\ITableManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageStampHelpers.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Common\TableStatusEntries.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\XmlErrorResponseWriter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IStorageManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\DeleteMessageMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IStorageStamp.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CacheRefreshOptions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\InsertRowMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\SEHRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\ODataErrorResponseWriter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IStorageAccount.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountLevelPropertyNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountServiceMetadataPropertyNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\UpdateRowMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\ResponseMessage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\EnumUtilities.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountPropertyNames.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\TimeoutRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountPermissions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\RethrowableTableServiceException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\KeyType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\LFUSizeOption.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountGcPolicy.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountUsageStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\VersioningType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\UpsertRowMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\TableKeyTooLargeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\DeleteRowMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableServiceProtocolException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetRowMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AlertsManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\BatchRequestNotSupportedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\ExceptionProcessor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetRowsMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\RequestTooLargeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\InvalidUrlException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\Set_ElementType_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MetadataFormatException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\BatchMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpRequestAccessorJuly09.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableServiceArgumentException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\AsyncIteratorContextExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\UriString.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ConversionExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetTableMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpRequestHeaderNotFoundException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ExceptionExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableServiceArgumentOutOfRangeException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetTablesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ObjectCache_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpRequestDuplicateHeaderException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HMACCryptoCache.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetTableServicePropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableServiceOverflowException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpRequestInvalidHeaderException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\SetTableServicePropertiesMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\Streams\BufferPoolMemoryStream.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\IBufferManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetTableAclMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\DefaultBufferManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\Tracing.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableServiceGeneralException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\SetTableAclMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HMACSHA256FISMACompliant.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableServiceError.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\TraceSourceAdapter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\Tuple_Type1, Type2_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\GetTableServiceStatsMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableAuthenticationHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MaskedIPAddress.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IPEndPointExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\AccountStoreConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableDataServiceV1_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\NephosUriComponents.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\IMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\INephosBaseMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\ITableMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpRequestAccessorCommon.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\ITableOperationMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\AsyncProcessor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ContinuationTokenVersion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MeasurementEvents\MeasurementEvent_TEvent_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ContinuationTokenParserException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\NephosBaseMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpUtilities.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ICommonBusinessLogicFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\HttpTableRequestProcessedMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\INephosBaseOperationMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\HttpRequestAccessor.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StringBuilderPool.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IIpThrottlingTable.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IPAddressExtensions.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\NephosBaseOperationMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableOperationMeasurementEvent_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ContinuationTokenParser.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\CreateTableMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\DataCorruptionException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TablePreflightRequestMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Storage.Service.ServiceManager\RealServiceManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\IAccountCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\DeleteTableMeasurementEvent.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\IPAddressRange.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AccountCondition.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\SummaryResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ListContainerSummaryResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\ListMessagesResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\AnalyticsSettings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\CorsRule.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AsyncHelper\IRethrowableException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\QueueProtocolHead.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\StorageManagerException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\QueueOperationContext.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\QueueXPathQueries.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\SecondaryReadDisabledException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Queue.Service.Protocols.Rest\QueueStatusEntries.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\BasicHttpProcessorConstants.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Storage\InsufficientAccountPermissionsException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\Protocols.Rest\QoSUtilities.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\MultipleVersionsSpecifiedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Common\XLogging\LoggingLevel.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableDataServiceBase_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Microsoft.Cis.Services.Nephos.Table.Service.Protocols.Rest\TableDataServiceV2_T_.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
